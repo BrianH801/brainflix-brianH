@@ -1,0 +1,10 @@
+@import './partials/app';
+@import './partials/mixins';
+@import './partials/fonts';
+@import './partials/utilities';
+@import './partials/header';
+@import './partials/banner';
+
+img {
+  max-width: 100%;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../assets/Logo/Logo-brainflix.svg';
-import header from './style/header.css';
 
 const Header = () => {
   return (
