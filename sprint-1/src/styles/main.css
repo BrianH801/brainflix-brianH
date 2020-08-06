@@ -72,15 +72,21 @@ body {
   display: -ms-flexbox;
   display: flex;
   border: 2px solid red;
+  width: 19rem;
+  height: 3.5rem;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 20rem;
-  height: 5rem;
-}
-
-.header__group-container__search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 15rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -88,36 +94,41 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border: 2px solid red;
+  border-radius: 1rem;
 }
 
-.header__group-container__upload {
+.header__upload {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #0095ff;
   border: 2px solid red;
 }
 
-.header__group-container__avatar {
+.header__avatar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
   -ms-flex-item-align: center;
       align-self: center;
-  margin-right: 1.25rem;
-  margin-top: 1.375rem;
+  overflow: auto;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: url("/src/assets/Images/Mohan-muruge.jpg") center/cover;
   border: 1px solid blue;
 }
 
@@ -132,13 +143,65 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 100%;
+  height: 50%;
   height: 41.875rem;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background: center/cover;
   position: relative;
+}
+
+.video__container__player {
+  max-width: 100%;
+  max-height: 50%;
+}
+
+.form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30rem;
+  max-width: 300px;
+  max-height: 450px;
+  border: 2px solid green;
+}
+
+.form__container input {
+  height: 3rem;
+}
+
+.form__container textarea {
+  height: 6rem;
+}
+
+.form__container button {
+  margin-top: 1.5rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 0.125rem;
+  text-align: center;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+}
+
+.video__list {
+  max-width: 300px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 img {

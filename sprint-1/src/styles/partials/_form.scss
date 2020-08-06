@@ -1,0 +1,29 @@
+.form__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30rem;
+  max-width: 300px;
+  max-height: 450px;
+
+  border: 2px solid green;
+
+  input {
+    height: 3rem;
+  }
+
+  textarea {
+    height: 6rem;
+  }
+
+  button {
+    margin-top: 1.5rem;
+    align-self: flex-end;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.125rem;
+    text-align: center;
+    justify-content: baseline;
+  }
+}
