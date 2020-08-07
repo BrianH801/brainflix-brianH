@@ -3,9 +3,9 @@ import React from 'react';
 function VideoItem(props) {
   return (
     <li className='video__list container flex-wrapper'>
-      <img src='/images/video-list-3.jpg' />
+      <p>{props.videoData.image}</p>
       <h3>{props.videoData.title}</h3>
-      <p>{props.videoData.channel}</p>
+      <p>{props.videoData.author}</p>
     </li>
   );
 }

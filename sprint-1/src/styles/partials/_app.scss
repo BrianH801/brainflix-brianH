@@ -1,3 +1,15 @@
 body {
   background: #fafafa;
 }
+
+.column-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.column-container__left {
+  display: flex;
+}
+.column-container__right {
+  display: flex;
+}

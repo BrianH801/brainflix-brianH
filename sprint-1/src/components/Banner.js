@@ -1,12 +1,12 @@
 import React from 'react';
-import video from '../assets/Video/BrainStation-vid.mp4';
+import video from '../assets/images/video-list-0.jpg';
 
 const Banner = () => {
   return (
     <div className='banner flex-wrapper container'>
       <div className='video__container'>
         <section className='video__player' controls>
-          <video src={video} alt='brainflix video' />
+          <img src={video} alt='brainflix video' />
         </section>
       </div>
     </div>
