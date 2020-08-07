@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Banner from './components/Banner';
-import Header from './components/Header';
+import Header from './components/CommentList/Header';
 import VideoList from './components/VideoList/VideoList';
 import Form from './components/Form';
 import './styles/main.css';
@@ -13,7 +13,7 @@ class App extends React.Component {
         id: uuidv4(),
         title: 'Become A Travel Pro In One Easy Lesson',
         author: 'Todd Welch',
-        image: '../public/Images/video-list-1.jpg',
+        image: '/Images/video-list-1.jpg',
       },
       {
         id: uuidv4(),
