@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '../assets/Images/Mohan-moruge.jpg';
+import avatar from '../assets/images/Mohan-muruge.jpg';
 
 const Form = () => {
   return (

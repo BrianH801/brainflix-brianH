@@ -79,7 +79,7 @@ class App extends React.Component {
       <div className='App'>
         <Header />
         <Banner mainVideo={this.state.mainVideo} />
-        <div className='column-container'>
+        <div className='column-container container flex-wrapper'>
           <div className='column-container__left'>
             {
               // video details will go here
