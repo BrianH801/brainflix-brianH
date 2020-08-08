@@ -1,8 +1,8 @@
 .form__container {
   display: flex;
-
-  width: 600px;
-  justify-content: first baseline;
+  flex-direction: column;
+  align-self: baseline;
+  width: 700px;
 }
 
 .form__inner-container {
@@ -12,7 +12,11 @@
   justify-content: end;
   align-items: center;
   height: 100px;
-  width: 550px;
+  width: 500px;
+}
+
+.form__author-date {
+  display: flex;
 }
 .form__banner {
   display: flex;

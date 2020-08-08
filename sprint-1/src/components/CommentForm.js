@@ -1,16 +1,20 @@
 import React from 'react';
 import avatar from '../assets/images/Mohan-muruge.jpg';
 
-const Form = () => {
+const CommentForm = ({ handleSubmitComment }) => {
   return (
     <>
       <div className='form__container flex-wrapper container'>
         <section className='form__article container flex-wrapper'>
-          <div className='form__hightlight'>
-            <h3>BMX Rampage: 2018 Highlights</h3>
+          <div className='form__caption-container'>
+            <div className='form__hightlight'>
+              <h1>BMX Rampage: 2018 Highlights</h1>
+            </div>
+            <div className='form__author-date'>
+              <div className='form__author'>By Red Cow</div>
+              <div className='form__date'>12/18/2018</div>
+            </div>
           </div>
-          <div className='form__author'>By Red Cow</div>
-          <div className='form__date'>12.18.2018</div>
           <p>
             On a gusty day in Southern Utah, a group of 25 daring mountain
             bikers blew the doors off what is possible on two wheels, unleashing
@@ -24,17 +28,17 @@ const Form = () => {
         <div className='form__avatar'>
           <img src={avatar} alt='brainflix avatar' />
         </div>
-        <form id='formID'>
+        <form id='formID' onSubmit={handleSubmitComment}>
           <div className='form__banner'>
             <h3>JOIN THE CONVERSION</h3>
           </div>
           <div className='form__inner-container'>
             <div className='form__name-date'>
-              <div id='dateForm' name='dateForm'></div>
+              <div id='dateForm' className='dateForm'></div>
               <textarea
                 className='form__textarea'
                 id='formComment'
-                name='name'
+                name='comment'
                 placeholder='Write a comment here'
               />
             </div>
@@ -48,4 +52,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default CommentForm;
