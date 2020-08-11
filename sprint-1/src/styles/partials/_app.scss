@@ -10,13 +10,12 @@ body {
 .column-container__left {
   display: flex;
   padding-top: 4rem;
-  width: 60%;
+  width: 55%;
 }
 .column-container__right {
-  padding-top: 5rem;
   display: flex;
   flex-direction: row;
-  width: 40%;
+  width: 45%;
   justify-content: space-evenly;
 }
 .column-container__form-list {

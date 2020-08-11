@@ -5,7 +5,7 @@ const Banner = (props) => {
     <div className='banner container'>
       <div className='video__container'>
         <section className='video__player' controls>
-          <img src={props.mainVideo.image} />
+          <img src={props.mainVideo.image} alt='' />
         </section>
       </div>
     </div>

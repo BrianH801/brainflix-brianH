@@ -1,5 +1,5 @@
-.video__list {
-  max-width: 740px;
+li.video__list {
+  max-width: 47rem;
   justify-content: baseline;
   display: flex;
   flex-direction: row;
@@ -15,10 +15,11 @@
 
   &__title {
     display: flex;
+    width: 150px;
   }
 
   &__author {
-    padding-top: -10px;
+    padding-top: -5.25rem;
     display: flex;
   }
 }

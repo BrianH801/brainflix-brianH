@@ -2,7 +2,12 @@
   display: flex;
   flex-direction: column;
   align-self: baseline;
-  width: 700px;
+  width: 43.75rem;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .form__inner-container {
@@ -11,8 +16,8 @@
   align-items: center;
   justify-content: end;
   align-items: center;
-  height: 100px;
-  width: 500px;
+  height: 6.25rem;
+  width: 31.25rem;
 }
 
 .form__author-date {
@@ -21,8 +26,8 @@
 .form__banner {
   display: flex;
   align-content: center;
-  height: 30px;
-  width: 550px;
+  height: 1.875rem;
+  width: 34.375rem;
 }
 .form__avatar {
   align-self: start;
