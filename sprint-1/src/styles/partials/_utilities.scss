@@ -1,5 +1,5 @@
 .container {
-  max-width: 100%;
+  max-width: $desktop-width;
   margin: 0 auto;
 }
 
@@ -12,4 +12,9 @@
 .body-width {
   $body-width: 67.5rem;
   margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  border: 1px dashed grey;
 }
