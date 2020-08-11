@@ -1,0 +1,14 @@
+@import './partials/variables';
+@import './partials/app';
+@import './partials/mixins';
+@import './partials/fonts';
+@import './partials/utilities';
+@import './partials/header';
+@import './partials/banner';
+@import './partials/commentform';
+@import './partials/comment';
+@import './partials/videoItem';
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,23 @@
+body {
+  background: #fafafa;
+}
+
+.column-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.column-container__left {
+  display: flex;
+  padding-top: 4rem;
+  width: 55%;
+}
+.column-container__right {
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+  justify-content: space-evenly;
+}
+.column-container__form-list {
+  width: 100%;
+}

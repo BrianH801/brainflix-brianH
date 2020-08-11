@@ -1,0 +1,51 @@
+.form__container {
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+  width: 43.75rem;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.form__inner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  align-items: center;
+  height: 6.25rem;
+  width: 31.25rem;
+}
+
+.form__author-date {
+  display: flex;
+}
+.form__banner {
+  display: flex;
+  align-content: center;
+  height: 1.875rem;
+  width: 34.375rem;
+}
+.form__avatar {
+  align-self: start;
+  object-fit: cover;
+  overflow: auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+textarea {
+  height: auto;
+  align-items: center;
+  width: 25rem;
+  height: 3rem;
+}
+button {
+  width: 10rem;
+  height: 3.5rem;
+  border-radius: 0.125rem;
+  background-color: #0095ff;
+}
