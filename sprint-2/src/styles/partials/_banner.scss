@@ -1,15 +1,18 @@
 .banner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   background: center/cover;
-  position: relative;
-}
 
-.video__container {
-  // max-width: 65%;
-  padding-bottom: 2rem;
+  &__video {
+    // max-width: 65%;
+    padding-bottom: 2rem;
+  }
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

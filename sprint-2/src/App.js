@@ -5,7 +5,6 @@ import Header from './components/Header';
 import VideoList from './components/VideoList/VideoList';
 import CommentList from './components/CommentList/CommentList';
 import CommentForm from './components/CommentForm';
-
 import './styles/main.css';
 
 class App extends Component {
@@ -117,17 +116,14 @@ class App extends Component {
       <div className='App'>
         <Header />
         <Banner mainVideo={this.state.mainVideo} />
-        <div className='column-container container flex-wrapper'>
-          <div className='column-container__left'>
-            {
-              // video details will go here
-            }
-            <div className='column-container__form-list'>
+        <div className='column__container container'>
+          <div className='column__container-left'>
+            <div className='column-form-list'>
               <CommentForm handleSubmitComment={this.handleSubmitComment} />
               <CommentList comments={this.state.comments} />
             </div>
           </div>
-          <div className='column-container__right'>
+          <div className='column__container-right'>
             <VideoList videos={this.state.sideVideo} />
           </div>
         </div>

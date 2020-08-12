@@ -3,12 +3,15 @@ import logo from '../assets/Logo/Logo-brainflix.svg';
 import search from '../assets/Icons/SVG/Icon-search.svg';
 import upload from '../assets/Icons/SVG/Icon-upload.svg';
 import avatar from '../assets/images/Mohan-muruge.jpg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className='header flex-wrapper body-width'>
+    <header className='header container'>
       <section className='header__logo'>
-        <img src={logo} alt='brainflix logo' />
+        <Link to='/'>
+          <img src={logo} alt='brainflix logo' />
+        </Link>
       </section>
       <section className='header__group-container'>
         <div className='header__search'>
@@ -17,7 +20,9 @@ const Header = () => {
         </div>
         <div className='header__upload'>
           <img src={upload} alt='brainflix upload-button' />
-          <div className='upload__text'>UPLOAD</div>
+          <Link to='/upload' className='upload__text'>
+            UPLOAD
+          </Link>
         </div>
         <div className='header__avatar'>
           <img src={avatar} alt='brainflix avatar' />

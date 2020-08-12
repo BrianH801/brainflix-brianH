@@ -1,25 +1,25 @@
-li.video__list {
+.video__list {
   max-width: 47rem;
   justify-content: baseline;
   display: flex;
   flex-direction: row;
-}
-.video__image {
-  max-width: 32%;
-  border-radius: 10%;
-}
 
-.video__container {
-  display: flex;
-  flex-direction: column;
-
-  &__title {
-    display: flex;
-    width: 150px;
+  &__image {
+    max-width: 32%;
+    border-radius: 10%;
   }
 
-  &__author {
-    padding-top: -5.25rem;
+  &__container {
     display: flex;
+    flex-direction: column;
+
+    &__title {
+      display: flex;
+      width: 150px;
+    }
+
+    &__author {
+      display: flex;
+    }
   }
 }

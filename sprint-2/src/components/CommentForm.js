@@ -4,10 +4,10 @@ import avatar from '../assets/images/Mohan-muruge.jpg';
 const CommentForm = ({ handleSubmitComment }) => {
   return (
     <>
-      <div className='form__container flex-wrapper container'>
-        <section className='form__article container flex-wrapper'>
+      <div className='form__container container'>
+        <section className='form__article'>
           <div className='form__caption-container'>
-            <div className='form__hightlight'>
+            <div className='form__highlight'>
               <h1>BMX Rampage: 2018 Highlights</h1>
             </div>
             <div className='form__author-date'>
