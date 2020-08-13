@@ -2,54 +2,40 @@
   display: flex;
   flex-direction: column;
   align-self: baseline;
-  width: 43.75rem;
+  max-height: 10rem;
+}
 
-  &__highlight {
-    display: flex;
-  }
+.form__avatar {
+  align-self: start;
+  object-fit: cover;
+  overflow: auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
 
-  &__author-date {
-    display: flex;
-  }
-  &__inner-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    align-items: center;
-    height: 6.25rem;
-    width: 31.25rem;
-  }
+.form__banner {
+  display: flex;
+  align-content: center;
+  height: 5rem;
+}
 
-  &__name-date {
-    display: flex;
-  }
-
-  &__banner {
-    display: flex;
-    align-content: center;
-    height: 1.875rem;
-    width: 34.375rem;
-  }
-
-  &__avatar {
-    align-self: start;
-    object-fit: cover;
-    overflow: auto;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-  }
-  &__textarea {
-    height: auto;
-    align-items: center;
-    width: 25rem;
-    height: 3rem;
-  }
-  &__button {
-    width: 10rem;
-    height: 3.5rem;
-    border-radius: 0.125rem;
-    background-color: #0095ff;
-  }
+.form__textarea {
+  padding-top: 2rem;
+  height: auto;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+}
+.form__name-date {
+  display: flex;
+  width: 80%;
+}
+.form__button {
+  justify-content: flex-end;
+  align-self: flex-end;
+  width: 10rem;
+  height: 3.5rem;
+  border-radius: 0.125rem;
+  background-color: #0095ff;
 }

@@ -1,10 +1,10 @@
-.video__list {
+.video__list li {
   max-width: 47rem;
   justify-content: baseline;
   display: flex;
   flex-direction: row;
 
-  &__image {
+  &__image img {
     max-width: 32%;
     border-radius: 10%;
   }

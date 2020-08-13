@@ -9,15 +9,21 @@ body {
   &__container-left {
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 50%;
   }
   &__container-form-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   &__container-right {
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 50%;
   }
+}
+
+@include tablet {
+  flex-direction: column;
+  flex-wrap: wrap;
 }

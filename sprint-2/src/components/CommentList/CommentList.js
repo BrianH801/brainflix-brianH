@@ -3,8 +3,11 @@ import Comment from './Comment';
 
 function CommentList(props) {
   console.log('CommentList props', props.comments);
+  if (props.comments === undefined) {
+    return <p>Loading comments</p>;
+  }
   return (
-    <ul className='video__list container flex-wrapper'>
+    <ul className='comment__list container'>
       {props.comments.map((comment) => (
         <Comment
           key={comment.id}

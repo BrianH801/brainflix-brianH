@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 function VideoItem(props) {
   return (
     <li className='video__list'>
@@ -11,8 +12,8 @@ function VideoItem(props) {
           <div className='video__title'>
             <h3>{props.videoData.title}</h3>
           </div>
-          <div className='video__author'>
-            <p>{props.videoData.author}</p>
+          <div className='video__channel'>
+            <p>{props.videoData.channel}</p>
           </div>
         </div>
       </Link>

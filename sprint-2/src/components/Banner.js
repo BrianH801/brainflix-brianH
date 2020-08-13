@@ -4,9 +4,9 @@ const Banner = (props) => {
   return (
     <div className='banner container'>
       <div className='banner__video'>
-        <section className='video__player' controls>
-          <img src={props.mainVideo.image} alt='' />
-        </section>
+        <video controls>
+          <source src={props.mainVideo.video} type='video/mp4' />
+        </video>
       </div>
     </div>
   );

@@ -4,15 +4,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  display: flex;
   background: center/cover;
 
-  &__video {
-    // max-width: 65%;
-    padding-bottom: 2rem;
-  }
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  &__video video {
+    padding-top: 2.5rem;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
   }
 }
