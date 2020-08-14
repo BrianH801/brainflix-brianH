@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
 import Banner from './components/Banner';
 import Header from './components/Header';
 import VideoList from './components/VideoList/VideoList';
 import CommentList from './components/CommentList/CommentList';
 import CommentForm from './components/CommentForm';
-import VideoInfo from './components/VideoInfo';
 import { API_KEY } from './env/env_variables';
-
 import './styles/main.css';
+
 //?apiKey=${API_KEY}
 const API_URL = `https://project-2-api.herokuapp.com`;
 const VIDEO_URL = `https://project-2-api.herokuapp.com`;
@@ -17,37 +15,63 @@ const VIDEO_URL = `https://project-2-api.herokuapp.com`;
 class App extends Component {
   state = {
     sideVideos: [],
-    mainVideo: [],
+    mainVideo: {},
     comments: [],
     videoDetails: {},
   };
 
   componentDidMount() {
     // sessionStorage.setItem('defaultSearch', 'id');
+    this.getActiveVideoData('1af0jruup5gu');
+    this.getVideoArrData();
+  }
+
+  getActiveVideoData(vidID) {
     axios
-      .get(`${VIDEO_URL}/videos/1af0jruup5gu/?api_key=${API_KEY}/id`)
+      .get(`${VIDEO_URL}/videos/${vidID}?api_key=${API_KEY}`)
       .then((response) => {
         console.log(response);
         this.setState({ mainVideo: response.data });
-      });
-    axios.get(`${API_URL}/videos/?api_key=${API_KEY}`).then((response) => {
-      console.log(response);
-      this.setState({ sideVideos: response.data });
-    });
+      })
+      .catch((err) => console.log(err));
   }
 
-  handleSubmitComment = (event) => {
-    event.preventDefault();
+  getVideoArrData() {
+    axios
+      .get(`${API_URL}/videos/?api_key=${API_KEY}`)
+      .then((response) => {
+        console.log(response);
+        this.setState({ sideVideos: response.data });
+      })
+      .catch((err) => console.log(err));
+  }
 
-    const id = uuidv4();
-    const comment = event.target.comment.value;
-    const time = Date.now();
+  componentDidUpdate(_prevProps, prevState) {
+    console.log('App component updated');
+    const { params } = this.props.match;
+    console.log(params.id);
+    // if (params.id !== undefined) {
+    //   console.log(params.id);
+    // }
+    if (params.id !== undefined && prevState.mainVideo.id !== params.id) {
+      this.getActiveVideoData(params.id);
+    }
+  }
+  componentWillMount() {
+    console.log('App component has unmounted');
+  }
+  //  handleSubmitComment = (event) => {
+  //   event.preventDefault();
 
-    this.setState({
-      comments: [...this.state.comments, { id, time, comment }],
-    });
-    event.target.reset();
-  };
+  //   const id = uuidv4();
+  //   const comment = event.target.comment.value;
+  //   const time = Date.now();
+
+  //   this.setState({
+  //     comments: [...this.state.comments, { id, time, comment }],
+  //   });
+  //   event.target.reset();
+  // };
 
   render() {
     return (
@@ -57,9 +81,7 @@ class App extends Component {
         <div className='column__container container'>
           <div className='column__container-left'>
             <div className='column-form-list'>
-              <VideoInfo mainVideo={this.state.mainVideo} />
               <CommentForm handleSubmitComment={this.handleSubmitComment} />
-
               <CommentList comments={this.state.mainVideo.comments} />
             </div>
           </div>
