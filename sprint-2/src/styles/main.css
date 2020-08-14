@@ -10,6 +10,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 48rem) {
+  .column__container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .column__container__container-left {
@@ -20,7 +29,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 50%;
+  width: 55%;
 }
 
 .column__container__container-form-list {
@@ -43,16 +52,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 50%;
-}
-
-@media (min-width: 48rem) {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: 45%;
 }
 
 @font-face {
@@ -99,6 +99,7 @@ body {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 1px dashed grey;
 }
 
 .header {
@@ -110,6 +111,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1rem;
   max-height: 25rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -126,10 +128,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 30%;
   height: 2.5rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (min-width: 48rem) {
+  .header__group-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .header__search {
@@ -142,8 +158,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 0.75rem;
-  width: 12.5rem;
+  min-width: 35%;
   border-radius: 1rem;
 }
 
@@ -154,11 +169,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 5.5rem;
+  min-width: 20%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 15%;
+  border-radius: 10%;
   background-color: #0095ff;
 }
 
@@ -177,28 +192,21 @@ body {
   border: 1px solid blue;
 }
 
-@media (min-width: 48rem) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
 }
 
-.banner__video video {
-  width: 100%;
+.banner__poster {
+  max-width: inherit;
 }
 
 @media (min-width: 48rem) {
@@ -296,7 +304,7 @@ body {
 .upload__slogan {
   font-family: 'AvenirNext LT Pro';
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .upload__form {
@@ -339,7 +347,7 @@ body {
 }
 
 .upload__textarea {
-  width: 100%;
+  width: 90%;
   height: 100px;
   font-family: 'AvenirNext LT Pro';
   font-weight: bold;
@@ -350,6 +358,24 @@ body {
   height: 100px;
   font-family: 'AvenirNext LT Pro';
   font-weight: bold;
+}
+
+@media (min-width: 48rem) {
+  .upload {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-color: green;
+  }
+}
+
+@media (min-width: 90rem) {
+  .upload {
+    background-color: blue;
+  }
 }
 
 button {
@@ -377,6 +403,49 @@ button {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.video__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+}
+
+.video__title {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: bold;
+  font-size: 3.75rem;
+}
+
+.video__channel-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1rem;
+}
+
+.video__channel {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.video__date {
+  font-family: 'AvenirNext LT Pro';
+  font-weight: normal;
+  font-size: 1.75rem;
+}
+
+.video__description {
+  padding-top: 4rem;
+  font-family: 'AvenirNext LT Pro';
+  font-weight: normal;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 48rem) {

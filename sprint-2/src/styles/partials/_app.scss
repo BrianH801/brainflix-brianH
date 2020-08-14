@@ -1,29 +1,31 @@
 body {
   background: #fafafa;
 }
-
+//Set column container to flex
 .column__container {
   display: flex;
   flex-direction: row;
-
+  flex-wrap: wrap;
+  //Included mixin to stack images when downsizing
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+  //set width on left container content to 60%
   &__container-left {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 55%;
   }
+  //set flex props on form list container
   &__container-form-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
+  //set width on right container or image container to 40%
   &__container-right {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 45%;
   }
-}
-
-@include tablet {
-  flex-direction: column;
-  flex-wrap: wrap;
 }

@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 1rem;
   max-height: 25rem;
   align-items: center;
 
@@ -11,26 +12,31 @@
 
   &__group-container {
     display: flex;
-    width: 25rem;
+    flex-wrap: wrap;
+    min-width: 30%;
     height: 2.5rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   &__search {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 0.75rem;
-    width: 12.5rem;
+    min-width: 35%;
     border-radius: 1rem;
   }
 
   &__upload {
     display: flex;
     justify-content: center;
-    width: 5.5rem;
+    min-width: 20%;
     align-items: center;
-    border-radius: 15%;
+    border-radius: 10%;
     background-color: #0095ff;
   }
 
@@ -44,8 +50,4 @@
     border-radius: 50%;
     border: 1px solid blue;
   }
-}
-@include tablet {
-  flex-direction: row;
-  flex-wrap: wrap;
 }
