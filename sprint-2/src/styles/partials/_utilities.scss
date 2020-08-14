@@ -8,13 +8,13 @@
   display: flex;
   flex-wrap: wrap;
 }
-
+//Setting the body with for display content
 .body-width {
   $body-width: 67.5rem;
   margin: 0 auto;
 }
-
+//Setting the box sizing for all objects on the Website
 * {
   box-sizing: border-box;
-  border: 1px dashed grey;
+  //border: 1px dashed grey;
 }

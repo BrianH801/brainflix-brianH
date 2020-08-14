@@ -6,6 +6,7 @@ function CommentList(props) {
   if (props.comments === undefined) {
     return <p>Loading comments</p>;
   }
+
   return (
     <ul className='comment__list container'>
       {props.comments.map((comment) => (
@@ -14,7 +15,7 @@ function CommentList(props) {
           id={comment.id}
           name={comment.name}
           comment={comment.comment}
-          date={comment.time}
+          date={new Date(comment.timestamp).toLocaleDateString()}
         />
       ))}
     </ul>

@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "css-loader": "^4.2.0",
+    "react-avatar-editor": "^11.0.10",
     "react-url-loader": "0.0.3"
   }
 }

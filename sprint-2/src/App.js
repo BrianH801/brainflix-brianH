@@ -5,6 +5,7 @@ import Header from './components/Header';
 import VideoList from './components/VideoList/VideoList';
 import CommentList from './components/CommentList/CommentList';
 import CommentForm from './components/CommentForm';
+import VideoInfo from './components/VideoInfo';
 import { API_KEY } from './env/env_variables';
 import './styles/main.css';
 
@@ -81,6 +82,7 @@ class App extends Component {
         <div className='column__container container'>
           <div className='column__container-left'>
             <div className='column-form-list'>
+              <VideoInfo mainVideo={this.state.mainVideo} />
               <CommentForm handleSubmitComment={this.handleSubmitComment} />
               <CommentList comments={this.state.mainVideo.comments} />
             </div>

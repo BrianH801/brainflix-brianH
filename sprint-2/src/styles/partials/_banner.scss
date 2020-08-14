@@ -1,13 +1,14 @@
 .banner {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background: center/cover;
+  flex-direction: column;
+  height: 100%;
+}
 
-  @include tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.banner__video video {
+  width: 100%;
+}
+
+@include tablet {
+  flex-direction: row;
+  flex-wrap: wrap;
 }

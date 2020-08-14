@@ -39,3 +39,7 @@
   border-radius: 0.125rem;
   background-color: #0095ff;
 }
+@include tablet {
+  flex-direction: row;
+  flex-wrap: wrap;
+}

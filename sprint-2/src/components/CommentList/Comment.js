@@ -1,7 +1,8 @@
 import React from 'react';
 
-function Comment({ id, name, comment, date }) {
-  const formattedDate = new Date(date).toLocaleDateString();
+function Comment({ id, name, comment, timestamp }) {
+  const formattedDate = new Date(timestamp).toLocaleDateString();
+  console.log('This is formatted date from comment.js', formattedDate);
 
   return (
     <li className='comment__id container flex-wrapper' id={id}>
@@ -11,7 +12,9 @@ function Comment({ id, name, comment, date }) {
       <div className='comment__comment'>
         <p>{comment}</p>
       </div>
-      <time className='comment__date'>{formattedDate}</time>
+      <div className='comment__date'>
+        {new Date(timestamp).toLocaleDateString()}
+      </div>
     </li>
   );
 }
