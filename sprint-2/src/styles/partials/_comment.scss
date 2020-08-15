@@ -1,7 +1,8 @@
 .comment__id {
   display: flex;
+  flex-wrap: wrap;
 }
 @include tablet {
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
