@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function VideoItem(props) {
+  console.log('This is props videodata.title', props.videoData.title);
   return (
     <li className='video__list'>
       <Link to={'/video/' + props.videoData.id}>

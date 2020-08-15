@@ -8,7 +8,7 @@ function CommentList(props) {
   }
 
   return (
-    <ul className='comment__list container'>
+    <ul className='comment__list'>
       {props.comments.map((comment) => (
         <Comment
           key={comment.id}

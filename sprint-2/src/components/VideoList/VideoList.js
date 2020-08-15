@@ -7,13 +7,22 @@ function VideoList(props) {
     return <p>Loading Videos</p>;
   }
   return (
-    <ul className='video__list container'>
+    <ul className='videos__list container'>
       {props.videos.map((video) => (
-        <div key={video.id} className='videos'>
-          <Link to={`/video/${video.id}`}>
-            <img src={video.image} alt={video.title} className='poster' />
-          </Link>
-          <h5>{video.title}</h5>
+        <div className='videos__poster-container'>
+          <div key={video.id} className='videos'>
+            <Link to={`/video/${video.id}`}>
+              <img
+                src={video.image}
+                alt={video.title}
+                className='videos__poster'
+              />
+            </Link>
+            <div className='videos__container'>
+              <div className='videos__title'>{video.title}</div>
+              <div className='videos__channel'>{video.channel}</div>
+            </div>
+          </div>
         </div>
       ))}
     </ul>

@@ -80,14 +80,14 @@ class App extends Component {
         <Header />
         <Banner mainVideo={this.state.mainVideo} />
         <div className='column__container container'>
-          <div className='column__container-left'>
-            <div className='column-form-list'>
+          <div className='column__left'>
+            <div className='column__list'>
               <VideoInfo mainVideo={this.state.mainVideo} />
               <CommentForm handleSubmitComment={this.handleSubmitComment} />
               <CommentList comments={this.state.mainVideo.comments} />
             </div>
           </div>
-          <div className='column__container-right'>
+          <div className='column__right'>
             <VideoList videos={this.state.sideVideos} />
           </div>
         </div>

@@ -10,7 +10,12 @@
   &__banner {
     display: flex;
     align-content: center;
-    height: 5rem;
+    text-align: center;
+    height: 6rem;
+    font-family: 'AvenirNext LT Pro';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
   }
 
   &__comment-button {
