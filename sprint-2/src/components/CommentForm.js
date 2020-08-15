@@ -5,24 +5,23 @@ const CommentForm = ({ handleSubmitComment }) => {
   return (
     <>
       <div className='form-container container'>
-        <div className='form__avatar'>
-          <img src={avatar} alt='brainflix avatar' />
-        </div>
         <form id='formID' onSubmit={handleSubmitComment}>
           <div className='form__banner'>
             <h3>JOIN THE CONVERSATION</h3>
           </div>
+
           <div className='form__inner-container'>
-            <div className='form__name-date'>
-              <div id='dateForm' className='dateForm'></div>
+            <div className='form__comment-button'>
+              <div className='form__avatar'>
+                <img src={avatar} alt='brainflix avatar' />
+              </div>
               <textarea
                 className='form__textarea'
                 id='formComment'
                 name='comment'
-                placeholder='Write a comment here'
+                placeholder='That was easily the most spectacular BMX moment ever.'
               />
-            </div>
-            <div className='form__button'>
+
               <button type='submit'>COMMENT</button>
             </div>
           </div>

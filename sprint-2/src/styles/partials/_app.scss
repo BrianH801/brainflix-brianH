@@ -14,7 +14,7 @@ body {
   &__container-left {
     display: flex;
     flex-direction: row;
-    width: 55%;
+    width: 60%;
   }
   //set flex props on form list container
   &__container-form-list {
@@ -26,6 +26,6 @@ body {
   &__container-right {
     display: flex;
     flex-direction: row;
-    width: 45%;
+    width: 40%;
   }
 }
