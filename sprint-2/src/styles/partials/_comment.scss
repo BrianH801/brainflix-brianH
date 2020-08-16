@@ -1,8 +1,29 @@
-.comment__id {
-  display: flex;
-  flex-wrap: wrap;
-}
-@include tablet {
-  flex-direction: row;
-  flex-wrap: nowrap;
+.comment {
+  &__id {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+
+    @include tablet {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+  &__name {
+    display: flex;
+    font-family: 'AvenirNext LT Pro';
+    font-style: normal;
+  }
+
+  &__comment {
+    font-family: 'AvenirNext LT Pro';
+    font-weight: normal;
+    font-style: normal;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
 }

@@ -16,19 +16,32 @@ body {
 //project and eventhough it is not perfect I think it looks
 // much better.
 
-.column {
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
+.column__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
   }
+  // min-width media query for desktop breakpoint, see _mixins.scss
 
   &__left {
-    width: 65%;
+    width: 60%;
+    flex-direction: row;
   }
   &__list {
     display: flex;
   }
   &__right {
-    width: 35%;
+    width: 40%;
+    flex-direction: row;
+
+    // @include tablet {
+    //   flex-direction: row;
+    //   flex-wrap: wrap;
+    //   width: 100%;
+    // }
   }
 }

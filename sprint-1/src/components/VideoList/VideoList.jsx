@@ -4,7 +4,7 @@ import VideoItem from './VideoItem';
 function VideoList(props) {
   console.log('VideoList props', props.videos);
   return (
-    <ul className='video__list container flex-wrapper'>
+    <ul className='video__list'>
       {props.videos.map((video) => (
         <VideoItem key={video.id} videoData={video} />
       ))}

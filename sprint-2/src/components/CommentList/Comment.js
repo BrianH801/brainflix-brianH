@@ -5,7 +5,7 @@ function Comment({ id, name, comment, timestamp }) {
   console.log('This is formatted date from comment.js', formattedDate);
 
   return (
-    <li className='comment__id container' id={id}>
+    <li className='comment__id flex-wrapper' id={id}>
       <div className='comment__name'>
         <h2>{name}</h2>
       </div>

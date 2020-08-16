@@ -7,12 +7,13 @@ import { Link } from 'react-router-dom';
 //BrainFlix home page
 
 function VideoList(props) {
-  console.log('VideoList videos', props.videos);
+  console.log('VideoList videos container', props.videos);
   if (props.videos === undefined) {
     return <p>Loading Videos</p>;
   }
   return (
-    <ul className='videos__list container'>
+    <ul className='videos__list'>
+      <div className='videos__next-video'>NEXT VIDEO</div>
       {props.videos.map((video) => (
         <div className='videos__poster-container'>
           <div key={video.id} className='videos'>

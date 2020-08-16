@@ -2,7 +2,7 @@ import React from 'react';
 
 function VideoItem(props) {
   return (
-    <li className='video__list container flex-wrapper'>
+    <li className='video__list'>
       <div className='video__image'>
         <img src={props.videoData.image} />
       </div>
