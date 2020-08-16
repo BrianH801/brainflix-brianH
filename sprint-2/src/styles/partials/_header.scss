@@ -6,6 +6,11 @@
   max-height: 25rem;
   align-items: center;
 
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
   &__logo {
     display: flex;
   }
@@ -16,11 +21,6 @@
     min-width: 30%;
     height: 2.5rem;
     justify-content: space-evenly;
-
-    @include tablet {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
   }
 
   &__search {

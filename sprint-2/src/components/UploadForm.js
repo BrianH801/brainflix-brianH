@@ -2,6 +2,9 @@ import React from 'react';
 import Header from './Header';
 import Bicycle from '../assets/images/Upload-video-preview.jpg';
 
+//This is the upload form that will be used to save data to the
+//server object that we will be builiding
+
 function UploadForm() {
   return (
     <>

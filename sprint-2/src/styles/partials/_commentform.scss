@@ -1,10 +1,16 @@
 .form {
   &__container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-self: baseline;
     max-height: 10rem;
     padding: 3rem;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   &__banner {
@@ -52,9 +58,5 @@
     height: 3.5rem;
     border-radius: 0.5rem;
     background-color: #0095ff;
-  }
-  @include tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 }

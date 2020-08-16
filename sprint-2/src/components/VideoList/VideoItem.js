@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//The VideoItem component displays the Images in the sidebar as
+//it gets props from VideoList component and displays the items
+//in an array in the sidebar
+
 function VideoItem(props) {
   console.log('This is props videodata.title', props.videoData.title);
   return (

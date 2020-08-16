@@ -12,9 +12,6 @@ function Comment({ id, name, comment, timestamp }) {
       <div className='comment__comment'>
         <p>{comment}</p>
       </div>
-      <div className='comment__date'>
-        {new Date(timestamp).toLocaleDateString()}
-      </div>
     </li>
   );
 }

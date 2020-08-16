@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//The videolist component compiles and displays the images on the right
+//sidebar. The videos are iterated through using the map method to
+//build an array that is Routed to the main movie and description on the
+//BrainFlix home page
+
 function VideoList(props) {
   console.log('VideoList videos', props.videos);
   if (props.videos === undefined) {

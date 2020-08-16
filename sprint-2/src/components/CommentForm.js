@@ -1,6 +1,9 @@
 import React from 'react';
 import avatar from '../assets/images/Mohan-muruge.jpg';
 
+//The CommentForm is used on the BrainFlix main page except that
+//it doesn't have the name field anymore.
+
 const CommentForm = ({ handleSubmitComment }) => {
   return (
     <>
@@ -21,7 +24,6 @@ const CommentForm = ({ handleSubmitComment }) => {
                 name='comment'
                 placeholder='That was easily the most spectacular BMX moment ever.'
               />
-
               <button type='submit'>COMMENT</button>
             </div>
           </div>

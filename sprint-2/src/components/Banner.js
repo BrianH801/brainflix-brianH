@@ -1,5 +1,8 @@
 import React from 'react';
 
+//The BannerComponent displays the main video when the image in the
+//sidebar is selected.
+
 const Banner = (props) => {
   return (
     <div className='banner container'>

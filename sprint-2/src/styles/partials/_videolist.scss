@@ -3,6 +3,12 @@
     padding-top: 3.5rem;
     min-width: 100%;
     flex-direction: column;
+    flex-wrap: nowrap;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
 
   &__poster-container {
@@ -37,9 +43,5 @@
     font-family: 'AvenirNext LT Pro';
     font-weight: normal;
     font-style: normal;
-  }
-  @include tablet {
-    display: flex;
-    flex-wrap: nowrap;
   }
 }

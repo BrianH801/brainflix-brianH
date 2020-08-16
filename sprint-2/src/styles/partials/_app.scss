@@ -1,24 +1,38 @@
 body {
   background: #fafafa;
 }
-//Set column container to flex
+
+//Note to Marker
+//I think you might notice this time around a little
+//improvement in my application of BEM. This is
+//primarily due to Nelson, Bahareh and Jim since I was convinced
+//that BEM and SASS really don't work, leading to much
+//frustration. That being said I know that this website
+//is NOT responsive that is because Jim helped me get it
+//that way and I changed something and could not get it
+//working again. I have spent most of the weedend trying to
+//this website to be responsive. That is the BAD news the
+//good news is that I used BEM and SASS throughout the
+//project and eventhough it is not perfect I think it looks
+// much better.
+
 .column {
   &__container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
 
-    //Included mixin to stack images when downsizing
     @include tablet {
-      flex-wrap: wrap;
+      flex-flow: row wrap;
     }
   }
-  //set width on left container content to 60%
+
   &__left {
     display: flex;
     width: 65%;
   }
-
-  //set width on right container or image container to 40%
+  &__list {
+    display: flex;
+  }
   &__right {
     display: flex;
     width: 35%;

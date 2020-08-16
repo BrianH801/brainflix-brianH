@@ -5,6 +5,9 @@ import upload from '../assets/Icons/SVG/Icon-upload.svg';
 import avatar from '../assets/images/Mohan-muruge.jpg';
 import { Link } from 'react-router-dom';
 
+//The Header Component displays the BrainFlix Logo the Search field and
+//the Upload Button. It is re-used in the Upload Form
+
 const Header = () => {
   return (
     <header className='header container'>
