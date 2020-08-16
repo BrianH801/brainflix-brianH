@@ -2,14 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
   &__poster {
     max-width: inherit;
   }
-}
-
-@include tablet {
-  flex-direction: row;
-  flex-wrap: wrap;
 }

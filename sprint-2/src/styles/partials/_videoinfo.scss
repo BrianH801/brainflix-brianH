@@ -7,7 +7,7 @@
 
     @include tablet {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
   }
   &__title {

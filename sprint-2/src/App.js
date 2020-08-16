@@ -67,18 +67,18 @@ class App extends Component {
 
   // I was going to try to add some more functionality to my app
   // but ran out of time on the weekend.
-  // handleSubmitComment = (event) => {
-  //   event.preventDefault();
+  handleSubmitComment = (event) => {
+    event.preventDefault();
 
-  //   const id = uuidv4();
-  //   const comment = event.target.comment.value;
-  //   const time = { timestamp: 1545162149000 };
-
-  //   this.setState({
-  //     comments: [...this.state.comments, { id, time, comment }],
-  //   });
-  //   event.target.reset();
-  // };
+    //   const id = uuidv4();
+    //   const comment = event.target.comment.value;
+    //   const time = { timestamp: 1545162149000 };
+    alert('This function is working but not wired up right now');
+    //   this.setState({
+    //     comments: [...this.state.comments, { id, time, comment }],
+    //   });
+    event.target.reset();
+  };
 
   render() {
     return (

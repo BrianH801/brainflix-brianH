@@ -16,7 +16,7 @@ function VideoInfo(props) {
         <div className='video__title'>{title}</div>
         <div className='video__channel-date'>
           <div className='video__channel'>By {channel} </div>
-          <div className='video__date'> {formattedDate}</div>
+          <div className='video__date'>{formattedDate}</div>
         </div>
         <div className='video__description'>{description}</div>
       </div>
