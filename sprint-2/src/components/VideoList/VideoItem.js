@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//The VideoItem component displays the Images in the sidebar as
-//it gets props from VideoList component and displays the items
-//in an array in the sidebar
+//
+//
+//
 
 function VideoItem(props) {
   console.log('This is props videodata.title', props.videoData.title);
@@ -14,9 +14,7 @@ function VideoItem(props) {
           <img src={props.videoData.image} alt='' />
         </div>
         <div className='video__container'>
-          <div className='video__title'>
-            <h3>{props.videoData.title}</h3>
-          </div>
+          <div className='video__title'>{props.videoData.title}</div>
           <div className='video__channel'>
             <p>{props.videoData.channel}</p>
           </div>

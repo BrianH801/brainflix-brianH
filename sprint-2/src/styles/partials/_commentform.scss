@@ -25,7 +25,7 @@
 
   &__comment-button {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   &__avatar {
@@ -45,8 +45,8 @@
     height: auto;
     text-align: center;
     align-items: center;
-    width: 27.5rem;
-    height: 3rem;
+    width: 25.5rem;
+    height: 3.5rem;
   }
 
   &__button {
