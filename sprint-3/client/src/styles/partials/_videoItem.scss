@@ -1,0 +1,11 @@
+.video {
+  &__list {
+    display: flex;
+    min-width: 500px;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}

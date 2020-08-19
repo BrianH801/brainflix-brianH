@@ -1,0 +1,61 @@
+.form {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    max-height: 10rem;
+    padding: 3rem;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__banner {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    height: 6rem;
+    font-family: 'AvenirNext LT Pro';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  &__comment-button {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__avatar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    object-fit: cover;
+    overflow: auto;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid blue;
+  }
+  &__textarea {
+    padding-top: 2rem;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    width: 25.5rem;
+    height: 3.5rem;
+  }
+
+  &__button {
+    justify-content: flex-end;
+    align-self: flex-end;
+    color: white;
+    width: 5rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    background-color: #0095ff;
+  }
+}

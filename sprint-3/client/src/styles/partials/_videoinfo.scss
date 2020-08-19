@@ -1,0 +1,37 @@
+.video {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__title {
+    font-family: 'AvenirNext LT Pro';
+    font-weight: bold;
+    font-size: 3.75rem;
+  }
+  &__channel-date {
+    display: flex;
+    padding-top: 1rem;
+  }
+  &__channel {
+    font-family: 'AvenirNext LT Pro';
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  &__date {
+    font-family: 'AvenirNext LT Pro';
+    font-weight: normal;
+    font-size: 1.75rem;
+  }
+  &__description {
+    padding-top: 4rem;
+    font-family: 'AvenirNext LT Pro';
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+}

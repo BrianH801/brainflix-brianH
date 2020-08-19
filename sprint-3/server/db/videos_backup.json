@@ -1,0 +1,12 @@
+[
+  {
+    "title": "BMX Rampage: 2018 Highlights",
+    "image": "https://i.imgur.com/l2Xfgpl.jpg",
+    "description": "Description of video",
+    "views": "0",
+    "likes": "0",
+    "duration": "4:01",
+    "video": "https://project-2-api.herokuapp.com/stream",
+    "comments": []
+  }
+]
