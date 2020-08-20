@@ -10,10 +10,34 @@ function getVideosByID(req, res) {
 
 function addVideo(req, res) {
   console.log(req.body);
-  if (!req.body.title || !req.body.description) {
+  if (
+    !req.body.id ||
+    !req.body.title ||
+    !req.body.channel ||
+    !req.body.image ||
+    !req.body.description ||
+    !req.body.views ||
+    !req.body.likes ||
+    !req.body.duration ||
+    !req.body.video ||
+    !req.body.timestamp ||
+    !req.body.comments
+  ) {
     res.status(400).json({
       error: 'POST body must contain all requiredProperties',
-      requiredProperties: ['title', 'description'],
+      requiredProperties: [
+        'id',
+        'title',
+        'channel',
+        'image',
+        'description',
+        'views',
+        'likes',
+        'duration',
+        'video',
+        'timestamp',
+        'comments',
+      ],
     });
   }
   res.json(videos.add(req.body));

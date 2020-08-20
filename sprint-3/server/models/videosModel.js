@@ -4,10 +4,30 @@ const { v4: uuidv4 } = require('uuid');
 
 const videosFile = path.join(__dirname, '../db/videos.json');
 
-function Video(title, description) {
-  this.id = uuidv4();
+function Video(
+  id,
+  title,
+  channel,
+  image,
+  description,
+  views,
+  likes,
+  duration,
+  video,
+  timestamp,
+  comments
+) {
+  this.id = id;
   this.title = title;
+  this.channel = channel;
+  this.image = image;
   this.description = description;
+  this.views = views;
+  this.likes = likes;
+  this.duration = duration;
+  this.video = video;
+  this.timestamp = timestamp;
+  this.comments = comments;
 }
 // list products array data from json file
 function list() {
@@ -17,7 +37,19 @@ function list() {
 
 function add(data) {
   const videosArr = list();
-  const video = new Video(data.title, data.description);
+  const video = new Video(
+    data.id,
+    data.title,
+    data.channel,
+    data.image,
+    data.description,
+    data.views,
+    data.likes,
+    data.duration,
+    data.video,
+    data.timestamp,
+    data.comments
+  );
   videosArr.push(video);
   fs.writeFileSync(videosFile, JSON.stringify(videosArr));
   return videosArr;
@@ -39,18 +71,7 @@ function deleteVideo(id, data) {
 function updateVideo(id, data) {
   const videosArr = list();
   const videosIndex = videosArr.findIndex((video) => video.id === id);
-  videosArr.splice(videosIndex, 1, {
-    id: id,
-    title: data.title,
-    channel: 'Red Cow',
-    image: 'https://i.imgur.com/l2Xfgpl.jpg',
-    description: data.description,
-    views: '0',
-    likes: '0',
-    duration: '4:01',
-    video: 'https://project-2-api.herokuapp.com/stream',
-    comments: [],
-  });
+  videosArr.splice(videosIndex, 1, {});
   fs.writeFileSync(videosFile, JSON.stringify(videosArr));
   return videosArr;
 }

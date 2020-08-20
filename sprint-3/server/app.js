@@ -1,14 +1,16 @@
 const express = require('express');
 const app = express();
-const port = 5000;
+const cors = require('cors');
+require('dotenv').config();
+const { PORT, BACKEND_URL } = process.env;
 const videoRoute = require('./routes/videoRoute');
 
 app.use(express.json());
-
-app.get('/', (req, res) => {
+app.use(cors());
+app.get('/', (_req, res) => {
   res.send('<h1>Hello Express');
 });
 
 app.use('/videos', videoRoute);
 
-app.listen(port, () => console.log(`listening at: http://localhost:${port}`));
+app.listen(PORT, () => console.log(`listening at: ${BACKEND_URL}:${PORT}`));
