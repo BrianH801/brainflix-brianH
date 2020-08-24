@@ -343,7 +343,7 @@ body {
           justify-content: space-evenly;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
-  width: 100%;
+  min-width: 100%;
   height: 40rem;
 }
 
@@ -360,7 +360,7 @@ body {
 }
 
 .upload__input {
-  width: 90%;
+  width: 100%;
   height: 3.125rem;
   font-family: 'AvenirNext LT Pro';
   font-weight: bold;
@@ -414,12 +414,58 @@ button {
   }
 }
 
+.comment__name-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .comment__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-family: 'AvenirNext LT Pro';
   font-style: normal;
+}
+
+.comment__date {
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'AvenirNext LT Pro';
+  font-style: normal;
+}
+
+.comment__avatar-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comment__avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid blue;
 }
 
 .comment__comment {

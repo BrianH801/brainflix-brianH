@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 import Bicycle from '../assets/images/Upload-video-preview.jpg';
 
 //This is the upload form that will be used to save data to the
@@ -67,7 +66,6 @@ function UploadForm() {
 
   return (
     <>
-      <Header />
       <section className='upload__form-container container'>
         <div className='upload__slogan'>
           <h1>Upload Video</h1>

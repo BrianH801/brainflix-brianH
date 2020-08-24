@@ -11,6 +11,7 @@ function VideoList(props) {
   if (props.videos === undefined) {
     return <p>Loading Videos</p>;
   }
+
   return (
     <ul className='videos__list'>
       <div className='videos__next-video'>NEXT VIDEO</div>

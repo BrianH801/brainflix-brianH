@@ -14,7 +14,7 @@ function CommentList(props) {
           key={comment.id}
           id={comment.id}
           name={comment.name}
-          date={comment.date}
+          date={new Date(comment.timestamp).toLocaleDateString()}
           comment={comment.comment}
         />
       ))}

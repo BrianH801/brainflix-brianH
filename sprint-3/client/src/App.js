@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Banner from './components/Banner';
-import Header from './components/Header';
 import VideoList from './components/VideoList/VideoList';
 import CommentForm from './components/CommentForm';
 import CommentList from './components/CommentList/CommentList';
@@ -82,8 +81,6 @@ class App extends Component {
       //tracking state and passing props to child components
 
       <div className='App'>
-        {/* Calling header component for app */}
-        <Header />
         {/* Calling banner component and passing state props for main video component*/}
         <Banner mainVideo={this.state.mainVideo} />
         <div className='column__container container'>

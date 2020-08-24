@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import UploadForm from './components/UploadForm';
 import NotFound from './components/NotFound';
+import Header from './components/Header';
 import App from './App';
 
 ReactDOM.render(
   <Router>
+    {/* I am not sure if this is what Bahareh meant in her suggestion and Hint */}
+    {/* but this is all I could get to work so hopefully it is correct */}
+    <Header />
     <Switch>
       {/* Setting routes in switch statement to the App Component */}
       <Route path='/' component={App} exact />
