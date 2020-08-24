@@ -1,8 +1,9 @@
 .comment {
   &__id {
     display: flex;
-    flex-direction: column;
-    max-width: 600px;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     @include tablet {
       flex-direction: column;
@@ -12,9 +13,18 @@
 
   &__name-date {
     display: flex;
-    align-items: baseline;
+    flex-direction: row;
+    align-content: flex-start;
     justify-content: flex-start;
+    align-items: center;
+    padding-left: 4rem;
   }
+
+  &__name-comment {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__name {
     display: flex;
     font-family: 'AvenirNext LT Pro';
@@ -27,14 +37,15 @@
     font-family: 'AvenirNext LT Pro';
     font-style: normal;
   }
-
   &__avatar-comment {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
   &__avatar {
     display: flex;
     align-content: center;
+    background-color: grey;
     justify-content: center;
     justify-items: center;
     object-fit: cover;
@@ -46,10 +57,11 @@
   }
 
   &__comment {
+    padding-left: 1rem;
     font-family: 'AvenirNext LT Pro';
     font-weight: normal;
     font-style: normal;
-    flex-wrap: wrap;
+    max-width: 500px;
 
     @include tablet {
       flex-direction: column;

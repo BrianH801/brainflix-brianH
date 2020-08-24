@@ -1,0 +1,12 @@
+.comment {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
