@@ -2,17 +2,23 @@
   &__container {
     display: flex;
     flex-direction: column;
-    padding: 3rem;
 
     @include tablet {
       display: flex;
       flex-wrap: wrap;
     }
   }
+
+  &__poster-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+  }
   &__title {
     font-family: 'AvenirNext LT Pro';
     font-weight: bold;
-    font-size: 3.75rem;
+    font-size: 2rem;
   }
   &__channel-date {
     display: flex;

@@ -38,10 +38,16 @@ body {
 
 .column__container__right {
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @font-face {
@@ -389,6 +395,7 @@ button {
   width: 10rem;
   height: 3.5rem;
   border-radius: 0.125rem;
+  color: white;
   background-color: #0095ff;
 }
 
@@ -543,7 +550,6 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 3rem;
 }
 
 @media (min-width: 48rem) {
@@ -556,10 +562,25 @@ button {
   }
 }
 
+.video__poster-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
 .video__title {
   font-family: 'AvenirNext LT Pro';
   font-weight: bold;
-  font-size: 3.75rem;
+  font-size: 2rem;
 }
 
 .video__channel-date {
