@@ -7,18 +7,20 @@ body {
 //improvement in my application of BEM. This is
 //primarily due to Nelson, Bahareh and Jim since I was convinced
 //that BEM and SASS really don't work, leading to much
-//frustration. That being said I know that this website
-//is NOT responsive that is because Jim helped me get it
-//that way and I changed something and could not get it
-//working again. I have spent most of the weedend trying to
-//this website to be responsive. That is the BAD news the
-//good news is that I used BEM and SASS throughout the
-//project and eventhough it is not perfect I think it looks
-// much better.
+//frustration. Hey Guys I am sorry to report that I struggled with
+//trying to get the comments on the right side of the images in
+//the sidebar videos. Unfortunately I just ran out of time. The other thing
+//that I struggled with as well is getting the comments count to load, but
+//I did get the Name and and the date to show up on the comments page
+//and I sort of got the grey avatar images on the page as well. I also tried
+//to destructure some of my Javascript Code from props in Banner and Video
+//Info so all in all I think a pretty good effort for where I am at
+//with this stuff.
 
 .column__container {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 2rem;
 
   @include tablet {
     flex-direction: row;
@@ -37,14 +39,5 @@ body {
   &__right {
     width: 40%;
     display: flex;
-    flex-direction: row;
-
-    justify-content: space-between;
-
-    // @include tablet {
-    //   flex-direction: row;
-    //   flex-wrap: wrap;
-    //   width: 100%;
-    // }
   }
 }

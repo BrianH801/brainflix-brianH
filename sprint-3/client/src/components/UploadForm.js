@@ -9,7 +9,6 @@ import Bicycle from '../assets/images/Upload-video-preview.jpg';
 
 function UploadForm() {
   function postUpload(postObj) {
-    console.log(postObj);
     axios
       .post(`http://localhost:5000/videos/`, postObj)
       .then((response) => {
@@ -26,8 +25,8 @@ function UploadForm() {
 
     return !!title && !!description;
   }
-  // //This is the upload form that will be used to save data to the
-  // //server object that we will be builiding
+  // This is the upload form that will be used to save data to the
+  // server object that we will be builiding
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
@@ -94,7 +93,7 @@ function UploadForm() {
           <div className='upload__button-container'>
             <button type='submit'>PUBLISH</button>
             <Link to='/' className='upload__cancel'>
-              CANCEL
+              <button>CANCEL</button>
             </Link>
           </div>
         </form>

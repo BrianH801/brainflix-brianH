@@ -1,7 +1,7 @@
 .video {
   &__list {
     display: flex;
-    min-width: 500px;
+    min-width: 31.25rem;
 
     @include tablet {
       flex-direction: row;

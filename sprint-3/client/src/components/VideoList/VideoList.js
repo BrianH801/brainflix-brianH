@@ -25,10 +25,10 @@ function VideoList(props) {
                 className='videos__poster'
               />
             </Link>
-            <div className='videos__container'>
-              <div className='videos__title'>{video.title}</div>
-              <div className='videos__channel'>{video.channel}</div>
-            </div>
+          </div>
+          <div className='videos__col'>
+            <div className='videos__title'>{video.title}</div>
+            <div className='videos__channel'>{video.channel}</div>
           </div>
         </div>
       ))}

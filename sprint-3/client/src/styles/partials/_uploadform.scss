@@ -24,7 +24,7 @@
     justify-content: space-evenly;
     align-content: space-around;
     min-width: 100%;
-    height: 40rem;
+    height: 45rem;
   }
 
   &__bicycle img {
@@ -34,13 +34,13 @@
 
   &__label {
     width: 100%;
-    height: 3.125rem;
+    height: 1rem;
     font-family: 'AvenirNext LT Pro';
     font-weight: bold;
   }
 
   &__input {
-    width: 100%;
+    width: 90%;
     height: 3.125rem;
     font-family: 'AvenirNext LT Pro';
     font-weight: bold;
@@ -54,18 +54,22 @@
   }
 
   &__button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-content: space-between;
+    padding-right: 10%;
+    padding-left: 5%;
+
     width: 100%;
-    height: 6.25rem;
+    height: 3.25rem;
     font-family: 'AvenirNext LT Pro';
     font-weight: bold;
   }
 }
 
 button {
-  justify-content: flex-end;
-  align-self: flex-end;
   width: 10rem;
-  height: 3.5rem;
+  height: 3.25rem;
   border-radius: 0.125rem;
   color: white;
   background-color: #0095ff;
